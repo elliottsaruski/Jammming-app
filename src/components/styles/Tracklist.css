@@ -1,0 +1,56 @@
+.track-list {
+  display: flex;
+  flex-direction: column;
+  height: 5px !important;
+  padding: 0 !important;
+}
+
+.track-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 100%;
+  position: relative;
+  padding: 5%;
+  font-size: 1.2rem;
+}
+
+.track-list button {
+  float: right;
+  padding: 0;
+  margin: 0;
+  color: rgb(226, 96, 9);
+  font-family: initial;
+}
+
+
+.track-list div {
+  text-align: left;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #d8d3d9 #1d4c72;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  padding: 2%;
+  width: 8px;
+  scrollbar-gutter: auto;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar-track {
+  background: #e9e9e900;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #827f8321;
+  border-radius: 10px;
+  border: 2px solid #378bcf86;
+  scroll-behavior: smooth;
+}

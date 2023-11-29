@@ -1,0 +1,14 @@
+.save-to-spotify-button {
+  color: rgb(133, 100, 211);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.save-to-spotify-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+}

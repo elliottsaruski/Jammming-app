@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding: 2%;
+}
+
+.app-full {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  padding-bottom: 5%;
+}
+
+.app-header strong {
+  color: rgb(133, 100, 211);
+}
+
+.results-playlist-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 700px;
+  padding-bottom: 5%;
+}
+
+html {
+  background: #360033; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #0b8793,
+    #360033
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #0b8793,
+    #360033
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  overflow: hidden;
+
+}
