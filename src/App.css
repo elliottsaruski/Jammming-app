@@ -43,5 +43,22 @@ html {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100vh;
   overflow: hidden;
+}
 
+@media only screen and (max-width: 600px) {
+  .app-full {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  html {
+    font-size: 12px;
+  }
+
+  .results-playlist-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    align-items: center;
+  }
 }

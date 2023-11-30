@@ -15,12 +15,12 @@ function TrackList({ playlist, setPlaylist }) {
       <div
         className="track-list"
         style={{
-          width: "90%"
+          width: "90%",
         }}>
         {/* Render tracks from playlist */}
         {playlist &&
           playlist.map((track) => (
-            <div className="track" style={{width: "90%"}} key={track.id}>
+            <div className="track" key={track.id}>
               <button
                 className="remove-button"
                 onClick={() => removeFromPlaylist(track)}>

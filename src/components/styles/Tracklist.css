@@ -10,13 +10,10 @@
   position: absolute;
   display: flex;
   right: 10px;
-  gap: 15%;
+  margin-bottom: 3%;
 }
 
-
 .playlist-items-container {
-  display: flex;
-  flex-direction: column;
   padding: 5%;
   position: relative;
   font-size: 1.2rem;
@@ -33,12 +30,28 @@
   flex-direction: column;
 }
 
-
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
   scrollbar-width: none;
   scrollbar-color: #d8d3d9 #1d4c72;
+}
+
+@media only screen and (max-width: 600px) {
+  .playlist-container {
+    display: flex;
+    height: auto;
+    position: absolute;
+    height: 40%;
+    bottom: 10px;
+  }
+  input {
+    padding: 0;
+  }
+  .playlist h2 {
+    height: min-content;
+    width: 100%;
+  }
 }
 
 /* Chrome, Edge, and Safari */
