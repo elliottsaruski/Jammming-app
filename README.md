@@ -1,7 +1,7 @@
 # Jamming - A React-based Spotify Playlist Creator
 
 ## Purpose
-Jammming is a web application built with React that allows users to search for music by song name on Spotify and create playlists. The primary purpose of this project is to provide users with a seamless and interactive experience for creating quick Spotify playlists and saving them to their account.
+Jammming is a web application built with React and Vite that allows users to search for music by song name on Spotify and create playlists. The primary purpose of this project is to provide users with a seamless and interactive experience for creating quick Spotify playlists and saving them to their account.
 
 ## Technologies Used
 - **React:** The project is built using React, a popular JavaScript library for building user interfaces.
