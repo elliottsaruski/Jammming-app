@@ -6,7 +6,6 @@
   border: 4px solid rgba(65, 126, 206, 0.158);
   border-radius: 10px;
   height: 100% !important;
-  padding: 0 !important;
 }
 
 .playlist input {
@@ -21,22 +20,16 @@
   text-align: left;
 }
 
-.playlist-items-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  position: relative;
-  font-size: 1.2rem;
-  overflow-y: scroll;
-
-}
-
 input::placeholder {
   color: rgba(255, 255, 255, 0.356);
 }
 
 input {
   outline: none;
+}
+
+.playlist .add-button {
+  display: none !important;
 }
 
 .save-to-spotify-button {
@@ -54,6 +47,9 @@ input {
 }
 
 .save-to-spotify-button-container {
-  padding: 5%;
-  border-top: 4px solid rgba(65, 126, 206, 0.158);
+  padding: 1%;
+}
+
+.playlist-items-container .add-track-button {
+  display: hidden !important;
 }

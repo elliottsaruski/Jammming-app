@@ -22,7 +22,7 @@ function Playlist({ playlist, setPlaylist }) {
             type="text"
             placeholder="Playlist Name"></input>
         </h2>
-        <div className="playlist-items-container">
+        <div className="playlist-items-container" >
           <TrackList playlist={playlist} setPlaylist={setPlaylist} />
         </div>
       </div>
@@ -32,6 +32,5 @@ function Playlist({ playlist, setPlaylist }) {
 Playlist.propTypes = {
   playlist: PropTypes.array,
   setPlaylist: PropTypes.func,
-  selectedTracks: PropTypes.array,
 };
 export default Playlist;

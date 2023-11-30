@@ -7,16 +7,19 @@ function Track({ id, name, artist, addToPlaylist }) {
   };
 
   return (
-    <div
-      style={{ borderBottom: "2px solid #378bcf86", fontWeight: "500" }}
-      className="track">
+    <div style={{ fontWeight: "500", width: "90%" }} className="track">
       <div>{name}</div>
-      <div style={{ fontWeight: "200", paddingBottom: "2%" }}>
+
+      <div
+        style={{
+          fontWeight: "200",
+          paddingBottom: "2%",
+          borderBottom: "2px solid #378bcf86",
+        }}>
         {artist}
-        <button className="add-song-button" onClick={handleAddToPlaylist}>
+        <button className="add-button" onClick={handleAddToPlaylist}>
           +
         </button>
-        {/* check if in playlist and render - if in playlist instead */}
       </div>
     </div>
   );
@@ -27,6 +30,7 @@ Track.propTypes = {
   name: PropTypes.string.isRequired,
   artist: PropTypes.string.isRequired,
   addToPlaylist: PropTypes.func,
+  checkInPlaylist: PropTypes.bool,
 };
 
 export default Track;

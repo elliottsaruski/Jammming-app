@@ -7,6 +7,7 @@ import Spotify from "../utils/Spotify";
 function SearchResults({ searchQuery, playlist, setPlaylist }) {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [checkInPlaylist, setCheckInPlaylist] = useState(false);
 
   useEffect(() => {
     const fetchResults = async () => {
@@ -29,7 +30,6 @@ function SearchResults({ searchQuery, playlist, setPlaylist }) {
 
   const addToPlaylist = (track) => {
     if (!playlist) {
-      // If playlist is not properly initialized, set it to an empty array
       setPlaylist([]);
     }
 
@@ -37,6 +37,11 @@ function SearchResults({ searchQuery, playlist, setPlaylist }) {
 
     if (!isInPlaylist) {
       setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
+      setCheckInPlaylist(true);
+    } else {
+      return alert(
+        `${track.name} by ${track.artist} is already in your playlist`
+      );
     }
   };
 
@@ -47,17 +52,20 @@ function SearchResults({ searchQuery, playlist, setPlaylist }) {
         <p>Loading...</p>
       ) : (
         <div className="results-container">
-          {results.map((track) => (
-            <Track
-              id={track.id}
-              name={track.name}
-              artist={track.artist}
-              album={track.album.name}
-              uri={track.uri}
-              key={track.id}
-              addToPlaylist={() => addToPlaylist(track)}
-            />
-          ))}
+          <div className="results">
+            {results.map((track) => (
+              <Track
+                id={track.id}
+                name={track.name}
+                artist={track.artist}
+                album={track.album.name}
+                uri={track.uri}
+                key={track.id}
+                checkInPlaylist={checkInPlaylist}
+                addToPlaylist={() => addToPlaylist(track)}
+              />
+            ))}
+          </div>
         </div>
       )}
     </div>

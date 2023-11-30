@@ -1,32 +1,38 @@
 .track-list {
   display: flex;
   flex-direction: column;
-  height: 5px !important;
-  padding: 0 !important;
-}
-
-.track-list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  height: 100%;
-  position: relative;
-  padding: 5%;
-  font-size: 1.2rem;
+  gap: 15px;
 }
 
 .track-list button {
-  float: right;
-  padding: 0;
-  margin: 0;
   color: rgb(226, 96, 9);
   font-family: initial;
+  position: absolute;
+  display: flex;
+  right: 10px;
+  gap: 15%;
 }
 
+
+.playlist-items-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  position: relative;
+  font-size: 1.2rem;
+  overflow-y: scroll;
+}
+
+.track {
+  justify-content: space-around;
+}
 
 .track-list div {
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
+
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
