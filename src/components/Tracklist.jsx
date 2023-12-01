@@ -24,8 +24,7 @@ function TrackList({ playlist, setPlaylist }) {
               <button
                 className="remove-button"
                 onClick={() => removeFromPlaylist(track)}>
-                {" "}
-                -{" "}
+                -
               </button>
 
               <Track id={track.id} name={track.name} artist={track.artist} />

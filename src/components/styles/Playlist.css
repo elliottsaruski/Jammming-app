@@ -11,7 +11,7 @@
 .playlist input {
   width: 100%;
   height: fit-content;
-  font-size: 32px;
+  font-size: 28px;
   background-color: transparent;
   border: none;
   text-align: left;
@@ -32,12 +32,6 @@ input {
   display: none !important;
 }
 
-.save-to-spotify-button {
-  display: flex;
-  position: relative;
-  bottom: 0;
-}
-
 .save-to-spotify-button:enabled {
   outline: none;
 }
@@ -46,30 +40,21 @@ input {
   outline: auto !important;
 }
 
-.save-to-spotify-button-container {
-  padding: 4%;
-}
-
 .playlist-items-container .add-track-button {
   display: hidden !important;
 }
 
 @media only screen and (max-width: 600px) {
   .playlist {
-    display: flex;
-    position: relative;
     width: 95%;
-    bottom: 0;
+    height: auto;
     margin: 0 auto;
-    font-size: 155%;
   }
-  h2 {
-    font-size: 155%;
+  .playlist-container {
+    display: flex;
   }
-  .save-to-spotify-button-container {
-    position: fixed;
-    display: flex !important;
-    bottom: 0;
+  .playlist h2 {
+    font-size: 20px;
+    padding: 0;
   }
-
 }
