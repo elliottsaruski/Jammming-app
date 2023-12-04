@@ -5,7 +5,7 @@
   background-color: rgba(0, 140, 255, 0.082);
   border: 4px solid rgba(65, 126, 206, 0.158);
   border-radius: 10px;
-  height: 100% !important;
+  height: 100%;
 }
 
 .playlist input {
@@ -45,14 +45,15 @@ input {
 }
 
 @media only screen and (max-width: 600px) {
+  .playlist-container {
+    width: 95%;
+  }
   .playlist {
     width: 95%;
-    height: auto;
+
     margin: 0 auto;
   }
-  .playlist-container {
-    display: flex;
-  }
+
   .playlist h2 {
     font-size: 20px;
     padding: 0;

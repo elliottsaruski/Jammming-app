@@ -51,6 +51,7 @@ h2 {
 
 @media only screen and (max-width: 600px) {
   .search-results {
+    height: 45%;
     width: 95%;
   }
 
@@ -62,13 +63,17 @@ h2 {
     text-align: center;
   }
   .results-container {
-    height: 300px;
     padding: 2%;
   }
   .results {
     gap: 0;
   }
+  .results-container .add-button {
+    margin-bottom: 0;
+   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  
+  
 }

@@ -1,5 +1,5 @@
 import "./styles/SearchBar.css";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types";
 
 import { useState } from "react";
 

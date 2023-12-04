@@ -7,7 +7,6 @@
   justify-items: center;
   width: 100%;
   gap: 2rem;
-
 }
 
 .search-bar input {
@@ -15,16 +14,15 @@
   border-radius: 10px;
   outline: none;
   padding: 1%;
-  width: 40%;
+  width: 45%;
   height: 100%;
   border: none;
-
-
 }
 
 .search-bar button {
   font-size: 1.2rem;
   background-color: rgb(133, 100, 211);
+  position: relative;
 }
 
 .search-bar input::placeholder {
@@ -32,8 +30,16 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .search-bar{
-    padding-bottom: 5%;
+  .search-bar {
+    width: 100%;
+    gap: 5%;
+  }
+  .search-bar input {
+    width: 65%;
+  }
+  .search-bar button {
+    padding: 2%;
+    font-size: small;
   }
 }
 

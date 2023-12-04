@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Spotify from "../utils/Spotify";
+import './styles/LogInToSpotifyButton.css'
 
 function LogInToSpotifyButton() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -20,7 +21,9 @@ function LogInToSpotifyButton() {
   }, []);
 
   return (
-    <div style={{ margin: "0 auto" }}>
+    <div
+      className={loggedIn ? "display-no-login-button" : "display-login-button"}
+      style={{ margin: "0 auto" }}>
       {!loggedIn && <button onClick={handleLogin}>Login to Spotify</button>}
     </div>
   );

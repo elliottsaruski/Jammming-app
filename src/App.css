@@ -8,7 +8,6 @@
 
 h1 {
   text-align: center;
-  padding: 3%;
 }
 
 .app-full {
@@ -17,6 +16,12 @@ h1 {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  justify-content: space-evenly;
+  padding: 5%;
+}
+
+.app-header{
+  padding-bottom: 5%;
 }
 
 .app-header strong {
@@ -26,8 +31,8 @@ h1 {
 .results-playlist-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  height: 70% !important;
+  justify-content: space-around;
+  height: 80%;
   padding-bottom: 4%;
   padding-top: 4%;
 }
@@ -50,10 +55,13 @@ html {
   .results-playlist-container {
     display: flex;
     flex-direction: column;
-    height: 100% !important;
     align-items: center;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 0;
+    justify-content: space-evenly;
   }
+
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
