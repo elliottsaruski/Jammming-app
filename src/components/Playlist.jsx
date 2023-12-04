@@ -1,13 +1,11 @@
 import "./styles/Playlist.css";
 import TrackList from "./Tracklist";
-import { useState } from "react";
 import PropTypes from "prop-types";
 
-function Playlist({ playlist, setPlaylist }) {
-  const [playlistName, setPlaylistName] = useState("");
-
+function Playlist({ playlist, setPlaylist, playlistName, setPlaylistName }) {
   const handleChange = (e) => {
     setPlaylistName(e.target.value);
+    console.log(playlistName);
   };
 
   return (
@@ -22,8 +20,12 @@ function Playlist({ playlist, setPlaylist }) {
             type="text"
             placeholder="Playlist Name"></input>
         </h2>
-        <div className="playlist-items-container" >
-          <TrackList playlist={playlist} setPlaylist={setPlaylist} />
+        <div className="playlist-items-container">
+          <TrackList
+            playlistName={playlistName}
+            playlist={playlist}
+            setPlaylist={setPlaylist}
+          />
         </div>
       </div>
     </div>
@@ -32,5 +34,7 @@ function Playlist({ playlist, setPlaylist }) {
 Playlist.propTypes = {
   playlist: PropTypes.array,
   setPlaylist: PropTypes.func,
+  playlistName: PropTypes.string,
+  setPlaylistName: PropTypes.func,
 };
 export default Playlist;

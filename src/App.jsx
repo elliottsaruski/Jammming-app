@@ -9,6 +9,7 @@ import SaveToSpotifyButton from "./components/SaveToSpotifyButton";
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [playlist, setPlaylist] = useState([]);
+  const [playlistName, setPlaylistName] = useState("");
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -29,9 +30,30 @@ function App() {
           setPlaylist={setPlaylist}
           searchQuery={searchQuery}
         />
-        <Playlist playlist={playlist} setPlaylist={setPlaylist} />
+        <Playlist
+          playlist={playlist}
+          setPlaylist={setPlaylist}
+          playlistName={playlistName}
+          setPlaylistName={setPlaylistName}
+        />
       </div>
-      <SaveToSpotifyButton />
+      <SaveToSpotifyButton playlist={playlist} playlistName={playlistName} />
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}>
+        <footer
+          style={{
+            position: "absolute",
+            bottom: "0",
+            color: "white",
+            opacity: ".1",
+          }}>
+          Created By: <strong>Elliott Saruski</strong>
+        </footer>
+      </div>
     </div>
   );
 }

@@ -45,12 +45,9 @@ input {
 }
 
 @media only screen and (max-width: 600px) {
-  .playlist-container {
-    width: 95%;
-  }
   .playlist {
     width: 95%;
-
+    padding: 0;
     margin: 0 auto;
   }
 

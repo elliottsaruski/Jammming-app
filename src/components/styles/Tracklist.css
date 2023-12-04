@@ -1,8 +1,8 @@
 .track-list {
   display: flex;
   flex-direction: column-reverse;
-  width: 85%;
-  gap: 15px;
+  gap: 0.5rem;
+  width: 80%;
 }
 
 .track-list button {
@@ -26,7 +26,6 @@
 }
 
 .track-list div {
-  text-align: left;
   display: flex;
   flex-direction: column;
 }
@@ -54,10 +53,7 @@
     padding: 2%;
   }
   .track-list {
-    gap: 0;
-  }
-  .track-list button {
-    margin-bottom: 0;
+    gap: 10px;
   }
 }
 

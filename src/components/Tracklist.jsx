@@ -2,7 +2,7 @@ import "./styles/Tracklist.css";
 import Track from "./Track";
 import PropTypes from "prop-types";
 
-function TrackList({ playlist, setPlaylist }) {
+function TrackList({ playlist, setPlaylist, playlistName }) {
   const removeFromPlaylist = (trackToRemove) => {
     const updatedPlaylist = playlist.filter(
       (track) => track.id !== trackToRemove.id
@@ -11,26 +11,19 @@ function TrackList({ playlist, setPlaylist }) {
   };
 
   return (
-    <div className="track-list-container">
-      <div
-        className="track-list"
-        style={{
-          width: "90%",
-        }}>
-        {/* Render tracks from playlist */}
-        {playlist &&
-          playlist.map((track) => (
-            <div className="track" key={track.id}>
-              <button
-                className="remove-button"
-                onClick={() => removeFromPlaylist(track)}>
-                -
-              </button>
-
-              <Track id={track.id} name={track.name} artist={track.artist} />
-            </div>
-          ))}
-      </div>
+    <div className="track-list" id={playlistName}>
+      {/* Render tracks from playlist */}
+      {playlist &&
+        playlist.map((track) => (
+          <div className="track" key={track.id}>
+            <button
+              className="remove-button"
+              onClick={() => removeFromPlaylist(track)}>
+              -
+            </button>
+            <Track id={track.id} name={track.name} artist={track.artist} />
+          </div>
+        ))}
     </div>
   );
 }
@@ -38,6 +31,7 @@ function TrackList({ playlist, setPlaylist }) {
 TrackList.propTypes = {
   playlist: PropTypes.array,
   setPlaylist: PropTypes.func,
+  playlistName: PropTypes.string,
 };
 
 export default TrackList;

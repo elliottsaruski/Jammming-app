@@ -7,7 +7,7 @@ function Track({ id, name, artist, addToPlaylist }) {
   };
 
   return (
-    <div style={{ fontWeight: "500", width: "90%" }} className="track">
+    <div style={{ fontWeight: "500"}} className="track">
       <button className="add-button" onClick={handleAddToPlaylist}>
         +
       </button>
@@ -16,8 +16,10 @@ function Track({ id, name, artist, addToPlaylist }) {
       <div
         style={{
           fontWeight: "200",
-          paddingBottom: "2%",
+          fontStyle: "italic",
+          width: "100%",
           borderBottom: "2px solid #378bcf86",
+
         }}>
         {artist}
       </div>

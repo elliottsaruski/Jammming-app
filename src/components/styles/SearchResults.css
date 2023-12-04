@@ -18,25 +18,23 @@ h2 {
 }
 
 .results-container {
-  padding: 5%;
+  padding: 5%;                      /* here */
   position: relative;
   font-size: 1.2rem;
   overflow-y: scroll;
   text-align: left;
   overflow-x: hidden;
+  
 }
 
 .results-container div {
   display: flex;
   flex-direction: column;
-  align-items: left;
 }
 
 .results {
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-  gap: 15px;
+  width: 80%;
+  gap: .5rem;
 }
 
 .results-container .add-button {
@@ -44,7 +42,6 @@ h2 {
   font-family: initial;
   position: absolute;
   padding: 2.5%;
-
   right: 10px;
   margin-bottom: 3%;
 }
@@ -53,6 +50,7 @@ h2 {
   .search-results {
     height: 45%;
     width: 95%;
+    margin: 0 auto;
   }
 
   .search-container {
@@ -61,16 +59,15 @@ h2 {
   h2 {
     font-size: 20px;
     text-align: center;
+    padding: 2%;
   }
   .results-container {
     padding: 2%;
   }
   .results {
-    gap: 0;
+    gap: 10px;
   }
-  .results-container .add-button {
-    margin-bottom: 0;
-   }
+
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
