@@ -6,8 +6,12 @@ function SaveToSpotifyButton({ playlist, playlistName }) {
   let name = playlistName;
   const handleSaveToSpotify = () => {
     const playlistURIs = playlist.map((track) => track.uri);
-    console.log(playlistURIs, name);
-    Spotify.savePlaylist(name, playlistURIs.reverse());
+
+    Spotify.savePlaylist(name, playlistURIs.reverse()).then(() => {
+      alert(
+        `Your new playlist, ${name}, has been created and posted to Spotify. The Playlist currently contains ${playlist.length} songs.`
+      );
+    });
   };
   return (
     <button onClick={handleSaveToSpotify} className="save-to-spotify-button">
@@ -22,4 +26,3 @@ SaveToSpotifyButton.propTypes = {
   playlist: PropTypes.array,
   playlistName: PropTypes.string,
 };
-

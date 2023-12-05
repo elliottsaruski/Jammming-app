@@ -17,7 +17,7 @@ h1 {
   width: 100vw;
   overflow: hidden;
   justify-content: space-evenly;
-  padding: 5%;
+  padding: 2%;
 }
 
 .app-header {
@@ -36,7 +36,15 @@ h1 {
   padding-bottom: 4%;
   padding-top: 4%;
 }
-
+footer {
+  display: none !important;
+}
+.playlist-items-container {
+  padding: 2%;
+}
+.results-container {
+  padding: 2%;
+}
 html {
   background: #360033; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -51,12 +59,21 @@ html {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   div {
     font-size: 12px;
   }
   footer {
     display: none;
+  }
+  .results-container .add-button {
+    font-size: 20px;
+    padding: 2%;
+  }
+
+  .track-list .remove-button {
+    font-size: 20px;
+    padding: 0%;
   }
 }
 
@@ -73,17 +90,21 @@ html {
   }
   .results-container .add-button {
     font-size: 20px;
-    padding-left: 7%;
-    padding-right: 7%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
+
   .track-list .remove-button {
     font-size: 20px;
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  footer {
+    display: none;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -94,9 +115,102 @@ html {
 @media only screen and (min-width: 768px) {
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 952px) {
+  .app-full {
+    padding: 5%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .app-header {
+    padding-bottom: 2%;
+    font-size: 80px;
+  }
+
+  .results-playlist-container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  .results-container .add-button {
+    font-size: 20px;
+    padding: 1%;
+    margin-bottom: 0;
+  }
+  .track-list .remove-button {
+    font-size: 20px;
+    padding: 1.2%;
+    margin-bottom: 0;
+  }
+
+  .playlist-container {
+    height: 100%;
+  }
+  .playlist-items-container {
+    padding: 2%;
+  }
+  .results-container {
+    padding: 2%;
+  }
+  .save-to-spotify-button {
+    display: flex;
+    font-size: 20px;
+    padding: 1%;
+  }
+
+  h2 {
+    padding-left: 2%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 600px) and (max-width: 970px) {
+  * {
+    font-size: small;
+  }
+
+  .app-full {
+    padding: 5%;
+  }
+  .app-header {
+    font-size: 42px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2%;
+  }
+  .app-header-container {
+    width: 100%;
+  }
+  strong {
+    font-size: 36px;
+  }
+  footer {
+    display: none;
+  }
+
+  .search-bar input {
+    display: flex;
+    width: 35vw;
+  }
+
+  .playlist .playlist-items-container {
+    padding: 2%;
+  }
+
+  .results-container {
+    padding: 2%;
+  }
+  .results-playlist-container {
+    padding: 2%;
+  }
+  h2 {
+    padding-left: 2%;
+
+    font-size: 16px;
+  }
+  input {
+    font-size: 16px !important;
+  }
+  .save-to-spotify-button {
+    font-size: smaller;
+  }
 }
