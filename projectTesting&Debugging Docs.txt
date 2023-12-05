@@ -1,0 +1,70 @@
+Project Testing and Debugging Documentation
+
+Testing Process
+
+1. Component Testing
+    Component 1: SearchResults
+
+        Test Case 1: Search Query Handling
+            Description: Test the component's response to different search queries.
+            Steps:
+                Input: "Summer Hits"
+                    Expected Result: Display relevant search results
+                Input: ""
+                    Expected Result: Display a message indicating no results
+
+        Test Case 2: Playlist Interaction
+            Description: Test adding and removing tracks from the playlist.
+            Steps:
+                Add a track to the playlist
+                    Expected Result: Track is added, and the playlist reflects the change
+                Remove a track from the playlist
+                    Expected Result: Track is removed, and the playlist reflects the change
+                    
+    Component 2: Playlist
+        
+        Test Case 1: Playlist Name Input
+            Description: Test the input handling for the playlist name.
+            Steps:
+                Input: "My Favorite Tracks"
+                    Expected Result: Playlist name updates accordingly
+        Test Case 2: Track Removal
+            Description: Test the removal of tracks from the playlist.
+            Steps:
+                Remove a track from the playlist
+                    Expected Result: Track is removed, and the playlist reflects the change
+
+    Component 3: SaveToSpotifyButton
+    
+        Test Case 1: Saving Playlist
+            Description: Test the saving of the playlist to Spotify.
+        Steps:
+            Click "Save To Spotify" button
+                Expected Result: Console log displays the playlist details
+                
+2. Overall Application Testing
+    Scenario: User Interaction Flow
+
+    Test Case: User Flow from Search to Saving Playlist
+    Description: Test the user journey from initiating a search to saving a playlist.
+    Steps:
+        Enter a search query
+        Add tracks to the playlist
+        Enter a playlist name
+        Click "Save To Spotify" button
+            Expected Result: Console log displays relevant details, and the user flow is smooth
+
+
+Issues Encountered
+
+    Issue: Adding a track to the playlist did not update the "+"/"-" button.
+    Details: The state of the button did not toggle correctly.
+    Resolution: Updated the state logic in the TrackList component.
+
+    Issue: Playlist name did not appear in the console log.
+    Details: The playlistName prop was not passed correctly to SaveToSpotifyButton.
+    Resolution: Adjusted prop passing in the App component.
+
+Conclusion
+Summarize the overall testing process, highlighting key successes, challenges, and resolutions.
+

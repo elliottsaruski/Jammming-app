@@ -127,6 +127,9 @@ html {
     padding-bottom: 2%;
     font-size: 80px;
   }
+  .app-full{
+    padding-top: 2%;
+  }
 
   .results-playlist-container {
     padding-top: 2%;
@@ -168,9 +171,6 @@ html {
     font-size: small;
   }
 
-  .app-full {
-    padding: 5%;
-  }
   .app-header {
     font-size: 42px;
     width: 100%;

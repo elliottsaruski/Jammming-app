@@ -28,10 +28,10 @@ Jammming is a web application built with React and Vite that allows users to sea
 
 ## Future Work
 
-- **Additional Functionalities:** Allow users to change their search query filter from "Song Names" to allow the user to search by other attributes like artist’s name, genre, etc.
-- **Improved Playlist Interactions:** Enhance playlist features, such as reordering tracks.
+- **Additional Functionalities:** Allow users to change their search query filter from "Song Names" to allow the user to search by other attributes like artist’s name, genre, etc. Include preview samples for each track. Update the access token logic to expire at exactly the right time, instead of setting expiration from when the user initiates their next search
+- **Improved Playlist Interactions:** Enhance playlist features, such as reordering tracks. Only display songs not currently present in the playlist in the search results. Ensure playlist information doesn’t get cleared if a user has to refresh their access token.
 - **User Feedback:** Implement more user feedback features, such as loading spinners and error messages.
-- **Responsive Design:** Ensure a seamless experience across various screen sizes and devices.
+- **Responsive Design:** Ensure a seamless experience across various screen sizes and devices. Add a loading screen while playlist is saving.
 
 ## Development Tools
 
